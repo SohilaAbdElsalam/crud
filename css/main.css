@@ -1,0 +1,60 @@
+.edit{
+    
+    background-color: #f7ecde;
+}
+h1{
+    font-family: Pacifico;
+    font-size: 3.125rem;
+    font-weight: 500;
+    position: relative;
+}
+h1::after{
+    content: "";
+    width: 20%;
+    height: 10%;
+    background-color: rgba(226, 169, 61 ,0.8);
+    position: absolute;
+    top: 6.5rem;
+    left: 40%;
+    transition: all 2;
+}
+h1:hover::after{
+   height: 20%;
+}
+h3{
+    font-family: Righteous;
+    font-size: 1.5625rem;
+    font-weight: 500;
+    color: #4d893b;
+}
+h3 i{
+    color: #f8c429;
+}
+.edit-but{
+    width:12%;
+}
+
+.edit-btn-itme1 a{
+    text-decoration: none;
+    color: azure;
+}
+.edit-btn-itme1{
+    padding: .3125rem;
+    background-color: #9eb23b;
+    color: azure;
+    
+}
+.edit-btn-itme1:hover{
+    background-color: #6e7e1e;
+    
+}
+.edit-btn-itme2{
+    padding: .3125rem;
+    background-color: #f54747;
+    color: azure;
+}
+
+.edit-btn-itme2:hover{
+    background-color: #a73737;
+    
+}

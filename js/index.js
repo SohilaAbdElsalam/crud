@@ -10,7 +10,7 @@ if(localStorage.getItem("ACC") !==null){
 
 
 function addAcc(){
-    if(validationName() && validationUrl){
+    if(validationName() && validationUrl()){
 
     var Acc ={
     
@@ -18,17 +18,15 @@ function addAcc(){
         Url :bookUrlInput.value,
     
     }
-   
+    AccList.push(Acc)
+
+    localStorage.setItem("ACC",JSON.stringify(AccList))
+       console.log(AccList);
+    
+       clear();
+       showData()
  }
   
-
- AccList.push(Acc)
-
-localStorage.setItem("ACC",JSON.stringify(AccList))
-   console.log(AccList);
-
-   clear();
-   showData()
 }
 //Clear Data
 function clear(){
@@ -49,7 +47,7 @@ function showData(){
                     <td>
                         
                         <button " class=" pe-2 edit-btn-itme1"> 
-                        <a href="${AccList[i].Url}">
+                        <a href="${AccList[i].Url}" target="_blank">
                         <i class="fa-solid fa-eye pe-2"></i>
                         visit</a>
                         
@@ -97,7 +95,7 @@ function validationName() {
     
 };
 function validationUrl() {
-    var regex =  /^https:[a-zA-Z0-9][a-zA-Z0-9]{15,80}$/; 
+    var regex =  /https?:\/\/(www\.)?[-a-zA-Z0-9@:%.\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%\+.~#?&\/\/=]*)/; 
     var text = bookUrlInput.value;
     var msgUrl = document.getElementById("msgUrl");
   
